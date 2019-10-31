@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "": "vendor\\lirahaus\\php-classes\\src"
+            "LiraHaus\\": "vendor\\lirahaus\\php-classes\\src"
         }
     }
 }

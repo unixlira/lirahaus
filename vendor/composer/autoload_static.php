@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitcae55bce3bf057a8dfd8def82bc45b0e
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/lirahaus/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'L' => 
+        array (
+            'LiraHaus\\' => 9,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'LiraHaus\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/lirahaus/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -41,7 +51,8 @@ class ComposerStaticInitcae55bce3bf057a8dfd8def82bc45b0e
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInitcae55bce3bf057a8dfd8def82bc45b0e::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitcae55bce3bf057a8dfd8def82bc45b0e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitcae55bce3bf057a8dfd8def82bc45b0e::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitcae55bce3bf057a8dfd8def82bc45b0e::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitcae55bce3bf057a8dfd8def82bc45b0e::$classMap;
 
