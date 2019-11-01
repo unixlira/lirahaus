@@ -1,0 +1,1894 @@
+<?php if(!class_exists('Rain\Tpl')){exit;}?><style>
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. Fonts
+2. Body and some general stuff
+3. Header
+4. Menu
+5. Home
+6. Search Bar
+7. Rooms
+8. Newsletter
+9. Footer
+
+
+******************************/
+
+/***********
+1. Fonts
+***********/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Playfair+Display:400,700');
+
+/*********************************
+2. Body and some general stuff
+*********************************/
+
+*
+{
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+body
+{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	background: #FFFFFF;
+	color: #a5a5a5;
+}
+div
+{
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ul
+{
+	list-style: none;
+	margin-bottom: 0px;
+}
+p
+{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 2;
+	font-weight: 500;
+	color: #8d8d8d;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+p a
+{
+	display: inline;
+	position: relative;
+	color: inherit;
+	border-bottom: solid 1px #ffa07f;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+p:last-of-type
+{
+	margin-bottom: 0;
+}
+a, a:hover, a:visited, a:active, a:link
+{
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+p a:active
+{
+	position: relative;
+	color: #FF6347;
+}
+p a:hover
+{
+	color: #FFFFFF;
+	background: #ffa07f;
+}
+p a:hover::after
+{
+	opacity: 0.2;
+}
+::selection
+{
+	background: #d6baa0;
+	color: #FFFFFF;
+}
+p::selection
+{
+	
+}
+h1{font-size: 72px;}
+h2{font-size: 48px;}
+h3{font-size: 36px;}
+h4{font-size: 24px;}
+h5{font-size: 18px;}
+h1, h2, h3, h4, h5, h6
+{
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	color: #333333;
+	line-height: 1.25;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+h1::selection, 
+h2::selection, 
+h3::selection, 
+h4::selection, 
+h5::selection, 
+h6::selection
+{
+	
+}
+.form-control
+{
+	color: #db5246;
+}
+section
+{
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+}
+.clear
+{
+	clear: both;
+}
+.clearfix::before, .clearfix::after
+{
+	content: "";
+	display: table;
+}
+.clearfix::after
+{
+	clear: both;
+}
+.clearfix
+{
+	zoom: 1;
+}
+.float_left
+{
+	float: left;
+}
+.float_right
+{
+	float: right;
+}
+.trans_200
+{
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.trans_300
+{
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.trans_400
+{
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-ms-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease;
+}
+.trans_500
+{
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+.fill_height
+{
+	height: 100%;
+}
+.super_container
+{
+	width: 100%;
+	overflow: hidden;
+}
+.prlx_parent
+{
+	overflow: hidden;
+}
+.prlx
+{
+	height: 130% !important;
+}
+.parallax-window
+{
+    min-height: 400px;
+    background: transparent;
+}
+.parallax_background
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.background_image
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.nopadding
+{
+	padding: 0px !important;
+}
+.button_container
+{
+	display: inline-block;
+}
+.button
+{
+	width: 181px;
+	height: 50px;
+	background: #5a2360;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.button:hover
+{
+	background: #d6baa0;
+}
+.button span
+{
+	display: inline-block;
+	position: relative;
+	font-size: 16px;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 50px;
+}
+.button span::after
+{
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	width: 100%;
+	height: 3px;
+	background: #d6baa0;
+	content: '';
+}
+.section_title_container
+{
+
+}
+.section_subtitle
+{
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: #7e7e7e;
+	line-height: 0.75;
+}
+.section_title
+{
+	margin-top: 10px;
+}
+
+/*********************************
+3. Header
+*********************************/
+
+.header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #081123;
+	z-index: 100;
+}
+.header_content
+{
+	width: 100%;
+	height: 100%;
+}
+.logo_container
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 265px;
+	height: 100%;
+	background: #5a2360;
+	z-index: 1;
+}
+.logo
+{
+	margin-top: 6px;
+}
+.logo a
+{
+	display: block;
+}
+.logo_subtitle
+{
+	font-size: 11px;
+	font-weight: 500;
+	color: #d6baa0;
+	line-height: 0.75;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+.logo_title
+{
+	font-family: 'Playfair Display', serif;
+	font-size: 30px;
+	font-weight: 700;
+	color: #FFFFFF;
+	line-height: 0.75;
+	margin-top: 8px;
+}
+.logo_stars
+{
+	display: inline-block;
+	margin-top: 11px;
+}
+.logo_stars ul li
+{
+	line-height: 0.75;
+}
+.logo_stars ul li:not(:last-child)
+{
+	margin-right: 4px;
+}
+.logo_stars ul li i
+{
+	font-size: 9px;
+	color: #d6baa0;
+}
+.header_inner
+{
+	width: 100%;
+	height: 123px;
+	padding-left: 187px;
+	-webkit-transition: all 600ms ease;
+	-moz-transition: all 600ms ease;
+	-ms-transition: all 600ms ease;
+	-o-transition: all 600ms ease;
+	transition: all 600ms ease;
+}
+.header.scrolled .header_inner
+{
+	height: 80px;
+}
+.main_nav
+{
+	height: 100%;
+}
+.main_nav ul
+{
+	height: 100%;
+}
+.main_nav ul li
+{
+	height: 100%;
+	padding-left: 34px;
+	padding-right: 32px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.main_nav ul li.active,
+.main_nav ul li:hover
+{
+	background: #5a2360;
+}
+.main_nav ul li a
+{
+	display: inline-block;
+	height: 100%;
+}
+.main_nav ul li a div
+{
+	height: 100%;
+}
+.main_nav ul li a div span
+{
+	font-size: 14px;
+	font-weight: 600;
+	color: #FFFFFF;
+	white-space: nowrap;
+	text-transform: uppercase;
+}
+.main_nav ul li a div span::after
+{
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	width: 100%;
+	height: 3px;
+	background: #d6baa0;
+	content: '';
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.main_nav ul li.active a div span::after,
+.main_nav ul li:hover a div span::after
+{
+	visibility: visible;
+	opacity: 1;
+}
+.header_review
+{
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: calc(100% + 40px);
+}
+.header_review a
+{
+	white-space: nowrap;
+	line-height: 1.1;
+	font-size: 14px;
+	font-weight: 400;
+	color: #FFFFFF;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.header_review a:hover
+{
+	color: #d6baa0;
+}
+.hamburger
+{
+	display: none;
+	cursor: pointer;
+	margin-top: 5px;
+}
+.hamburger i
+{
+	font-size: 18px;
+	color: #FFFFFF;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.hamburger i:hover
+{
+	color: #d6baa0;
+}
+
+/*********************************
+4. Menu
+*********************************/
+
+.menu
+{
+	position: fixed;
+	left: 0;
+	top: -100vh;
+	width: 100vw;
+	height: 100vh;
+	background: #0b1423;
+	z-index: 99;
+	-webkit-transition: all 800ms cubic-bezier(.88,.31,.65,.91);
+	-moz-transition: all 800ms cubic-bezier(.88,.31,.65,.91);
+	-ms-transition: all 800ms cubic-bezier(.88,.31,.65,.91);
+	-o-transition: all 800ms cubic-bezier(.88,.31,.65,.91);
+	transition: all 800ms cubic-bezier(.88,.31,.65,.91);
+}
+.menu.active
+{
+	top: 0;
+}
+.menu_content
+{
+	width: 100%;
+	height: 100%;
+}
+.menu_nav_list li
+{
+	-webkit-transform: translateY(-50px);
+	-moz-transform: translateY(-50px);
+	-ms-transform: translateY(-50px);
+	-o-transform: translateY(-50px);
+	transform: translateY(-50px);
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 800ms ease;
+	-moz-transition: all 800ms ease;
+	-ms-transition: all 800ms ease;
+	-o-transition: all 800ms ease;
+	transition: all 800ms ease;
+}
+.menu_nav_list li:first-child
+{
+	transition-delay: 400ms;
+}
+.menu_nav_list li:nth-child(2)
+{
+	transition-delay: 500ms;
+}
+.menu_nav_list li:nth-child(3)
+{
+	transition-delay: 600ms;
+}
+.menu_nav_list li:nth-child(4)
+{
+	transition-delay: 700ms;
+}
+.menu_nav_list li:nth-child(5)
+{
+	transition-delay: 800ms;
+}
+.menu_nav_list li:nth-child(6)
+{
+	transition-delay: 900ms;
+}
+.menu_nav_list li:nth-child(7)
+{
+	transition-delay: 1000ms;
+}
+.menu_nav_list li:nth-child(8)
+{
+	transition-delay: 1100ms;
+}
+.menu_nav_list li:nth-child(9)
+{
+	transition-delay: 1200ms;
+}
+.menu.active .menu_nav_list li
+{
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	transform: translateY(0px);
+	visibility: visible;
+	opacity: 1;
+}
+.menu_nav_list li a
+{
+	position: relative;
+	font-family: 'Playfair Display', serif;
+	font-size: 40px;
+	color: #FFFFFF;
+	font-weight: 400;
+	line-height: 1.3;
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-ms-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease;
+}
+.menu_nav_list li a::after
+{
+	display: block;
+	position: absolute;
+	top: 63%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: -15px;
+	width: 0%;
+	height: 3px;
+	background: #FFFFFF;
+	content: '';
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-ms-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease;
+}
+.menu_nav_list li a:hover
+{
+	color: #d6baa0;
+}
+.menu_nav_list li a:hover::after
+{
+	width: calc(100% + 30px);
+}
+.menu_review
+{
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	bottom: 15px;
+}
+.menu_review a
+{
+	white-space: nowrap;
+	line-height: 1.1;
+	font-size: 12px;
+	font-weight: 400;
+	color: #FFFFFF;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.menu_review a:hover
+{
+	color: #d6baa0;
+}
+
+/*********************************
+5. Home
+*********************************/
+
+.home
+{
+	width: 100%;
+	height: 396px;
+}
+.home_content
+{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 133px;
+	text-align: center;
+}
+.home_subtitle
+{
+	font-size: 14px;
+	font-weight: 600;
+	color: #FFFFFF;
+	line-height: 0.75;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+.home_title
+{
+	font-family: 'Playfair Display', serif;
+	font-size: 48px;
+	color: #FFFFFF;
+	font-weight: 700;
+	line-height: 0.75;
+	margin-top: 17px;
+}
+
+/*********************************
+6. Search Bar
+*********************************/
+
+.search_bar
+{
+	width: 100%;
+	z-index: 2;
+	background: #FFFFFF;
+}
+.search_bar_container
+{
+	width: calc(100% + 40px);
+	left: -20px;
+	background: #320d36;
+	height: 162px;
+	margin-top: -82px;
+	padding-left: 50px;
+	padding-right: 48px;
+	padding-top: 53px;
+	padding-bottom: 50px;
+}
+.search_bar_form > div:not(:last-child)
+{
+	padding-right: 17px;
+}
+.search_bar_form > div:first-child,
+.search_bar_form > div:nth-child(2)
+{
+	width: 35.163%;
+}
+.search_bar_form > div:nth-child(3)
+{
+	width: 29.429%;
+}
+.search_form_select
+{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 59px;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    color: #FFFFFF;
+    background: #5a2360;
+    cursor: pointer;
+    padding-left: 22px;
+}
+.search_form_select option
+{
+	font-style: normal;
+}
+.search_bar_button
+{
+	width: 236px;
+	height: 59px;
+	cursor: pointer;
+	background: transparent;
+	border: solid 2px #d6baa0;
+	color: #d6baa0;
+	font-size: 16px;
+	font-weight: 400;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.search_bar_button:hover
+{
+	background: #d6baa0;
+	color: #320d36;
+}
+.search_bar_container::after
+{
+	display: block;
+	position: absolute;
+	left: 53px;
+	bottom: 0;
+	width: calc(100% - 103px);
+	height: 4px;
+	background: #d6baa0;
+	content: '';
+}
+
+/*********************************
+7. Rooms
+*********************************/
+
+.rooms
+{
+	width: 100%;
+	background: #FFFFFF;
+	padding-top: 100px;
+}
+.room_row
+{
+	margin-top: 82px;
+}
+.room_col
+{
+	margin-bottom: 130px;
+}
+.room
+{
+	box-shadow: 0px 23px 35px rgba(4,4,4,0.18);
+}
+.room_image
+{
+	width: 100%;
+}
+.room_image img
+{
+	max-width: 100%;
+}
+.room_content
+{
+	padding-top: 58px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 62px;
+}
+.room_type
+{
+	font-size: 12px;
+	font-weight: 600;
+	color: #7e7e7e;
+	text-transform: uppercase;
+	line-height: 0.75;
+}
+.room_title
+{
+	margin-top: 13px;
+}
+.room_title a
+{
+	font-family: 'Playfair Display', serif;
+	font-size: 24px;
+	font-weight: 700;
+	color: #333333;
+	line-height: 1.25;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.room_title a:hover
+{
+	color: #d6baa0;
+}
+.room_text
+{
+	margin-top: 27px;
+}
+.room_price
+{
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	top: -27px;
+	width: 185px;
+	height: 47px;
+	background: #FFFFFF;
+	line-height: 47px;
+	font-size: 14px;
+	color: #5a2360;
+	font-weight: 500;
+}
+.room_price span
+{
+	color: #8d8d8d;
+}
+.room_button
+{
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	bottom: -32px;
+}
+
+/*********************************
+8. Newsletter
+*********************************/
+
+.newsletter
+{
+	width: 100%;
+	background: #FFFFFF;
+	padding-bottom: 72px;
+}
+.newsletter_container
+{
+	padding-bottom: 82px;
+	border-bottom: solid 2px #e8e8e8;
+}
+.newsletter_content
+{
+	padding-right: 20px;
+}
+.newsletter_text
+{
+	margin-top: 28px;
+}
+.newsletter_form_container
+{
+	width: 100%;
+	margin-top: 97px;
+}
+.newsletter_form
+{
+	display: block;
+}
+.newsletter_input
+{
+	width: 100%;
+	height: 50px;
+	border: solid 2px #c8c8c8;
+	background: #FFFFFF;
+	padding-left: 28px;
+	outline: none;
+}
+.newsletter_button
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 181px;
+	height: 50px;
+	background: #5a2360;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.newsletter_button span
+{
+	display: inline-block;
+	position: relative;
+	font-size: 16px;
+	font-weight: 500;
+	color: #FFFFFF;
+	line-height: 50px;
+}
+.newsletter_button span::after
+{
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	width: 100%;
+	height: 3px;
+	background: #d6baa0;
+	content: '';
+}
+.newsletter_button:hover
+{
+	background: #d6baa0;
+}
+.newsletter_input::-webkit-input-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 500 !important;
+	font-style: italic;
+	color: #7e7e7e !important;
+}
+.newsletter_input:-moz-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 500 !important;
+	font-style: italic;
+	color: #7e7e7e !important;
+}
+.newsletter_input::-moz-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 500 !important;
+	font-style: italic;
+	color: #7e7e7e !important;
+} 
+.newsletter_input:-ms-input-placeholder
+{ 
+	font-size: 12px !important;
+	font-weight: 500 !important;
+	font-style: italic;
+	color: #7e7e7e !important;
+}
+.newsletter_input::input-placeholder
+{
+	font-size: 12px !important;
+	font-weight: 500 !important;
+	font-style: italic;
+	color: #7e7e7e !important;
+}
+.newsletter_border_container
+{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+.newsetter_border
+{
+	width: 100%;
+	border-bottom: solid 2px #e8e8e8;
+}
+
+/*********************************
+9. Footer
+*********************************/
+
+.footer
+{
+	width: 100%;
+	background: #FFFFFF;
+	padding-top: 91px;
+	padding-bottom: 56px;
+}
+.footer_logo_container
+{
+
+}
+.footer_logo
+{
+	
+}
+.footer_logo a
+{
+	display: inline-block;
+}
+.footer_logo_subtitle
+{
+	font-size: 11px;
+	font-weight: 500;
+	color: #333333;
+	line-height: 0.75;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+}
+.footer_logo_title
+{
+	font-family: 'Playfair Display', serif;
+	font-size: 30px;
+	font-weight: 700;
+	color: #333333;
+	line-height: 0.75;
+	margin-top: 8px;
+}
+.footer_logo_stars
+{
+	display: inline-block;
+	margin-top: 11px;
+}
+.footer_logo_stars ul li
+{
+	line-height: 0.75;
+}
+.footer_logo_stars ul li:not(:last-child)
+{
+	margin-right: 4px;
+}
+.footer_logo_stars ul li i
+{
+	font-size: 9px;
+	color: #333333;
+}
+.copyright
+{
+	font-size: 11px;
+	font-weight: 500;
+	color: #8d8d8d;
+	margin-top: 11px;
+}
+.footer_menu ul li
+{
+	line-height: 0.75;
+}
+.footer_menu ul li:not(:last-child)
+{
+	margin-right: 45px;
+}
+.footer_menu ul li a
+{
+	font-size: 14px;
+	font-weight: 500;
+	color: #333333;
+	white-space: nowrap;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.footer_menu ul li a:hover
+{
+	color: #d6baa0;
+}
+.footer_menu_text
+{
+	margin-top: 21px;
+}
+.footer_contact
+{
+	margin-top: -5px;
+}
+.footer_contact_content ul li
+{
+	font-size: 14px;
+	font-weight: 500;
+	color: #8d8d8d;
+}
+.footer_contact_content ul li span
+{
+	color: #333333;
+	margin-left: 2px;
+}
+.footer_contact_content ul li:not(:last-child)
+{
+	margin-bottom: 14px;
+}
+
+
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. 1600px
+2. 1440px
+3. 1280px
+4. 1199px
+5. 1024px
+6. 991px
+7. 959px
+8. 880px
+9. 768px
+10. 767px
+11. 539px
+12. 479px
+13. 400px
+
+******************************/
+
+/************
+1. 1600px
+************/
+
+@media only screen and (max-width: 1600px)
+{
+	
+}
+
+/************
+2. 1440px
+************/
+
+@media only screen and (max-width: 1440px)
+{
+	.header_review
+	{
+		display: none;
+	}
+	.home_slider_dots
+	{
+		left: 80px;
+	}
+	.header_inner
+	{
+		padding-left: 208px;
+	}
+}
+
+/************
+3. 1380px
+************/
+
+@media only screen and (max-width: 1380px)
+{
+	
+}
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{
+	.header_inner
+	{
+		padding-left: 268px;
+	}
+	.main_nav ul li
+	{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
+/************
+4. 1199px
+************/
+
+@media only screen and (max-width: 1199px)
+{
+	.header_button
+	{
+		display: none;
+	}
+	.header_inner
+	{
+		padding-left: 220px;
+	}
+	.intro_2
+	{
+		right: 58px;
+	}
+	.footer_menu ul li:not(:last-child)
+	{
+		margin-right: 25px;
+	}
+}
+
+/************
+4. 1100px
+************/
+
+@media only screen and (max-width: 1100px)
+{
+	
+}
+
+/************
+5. 1024px
+************/
+
+@media only screen and (max-width: 1024px)
+{
+	
+}
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+	.main_nav
+	{
+		display: none;
+	}
+	.hamburger
+	{
+		display: block;
+	}
+	.home_slider_dots
+	{
+		left: 30px;
+	}
+	.search_bar_container
+	{
+		height: auto;
+		width: 100%;
+		left: auto;
+	}
+	.search_bar_form > div:not(:last-child)
+	{
+		padding-right: 0px;
+		padding-bottom: 17px;
+	}
+	.search_bar_form > div:first-child,
+	.search_bar_form > div:nth-child(2),
+	.search_bar_form > div:nth-child(3)
+	{
+		width: 100%;
+	}
+	.intro_col:not(:last-child)
+	{
+		margin-bottom: 80px;
+	}
+	.video_col:not(:last-child)
+	{
+		margin-bottom: 60px;
+	}
+	.newsletter_form_container
+	{
+		margin-top: 70px;
+	}
+	.footer_col:not(:last-child)
+	{
+		margin-bottom: 60px;
+	}
+}
+
+/************
+7. 959px
+************/
+
+@media only screen and (max-width: 959px)
+{
+	
+}
+
+/************
+8. 880px
+************/
+
+@media only screen and (max-width: 880px)
+{
+	
+}
+
+/************
+9. 768px
+************/
+
+@media only screen and (max-width: 768px)
+{
+	.intro_2
+	{
+		right: 58px;
+	}
+}
+
+/************
+10. 767px
+************/
+
+@media only screen and (max-width: 767px)
+{
+	.home_title
+	{
+		font-size: 56px;
+	}
+	.home_subtitle
+	{
+		font-size: 12px;
+	}
+	.home_title
+	{
+		font-size: 36px;
+	}
+}
+
+/************
+11. 575px
+************/
+
+@media only screen and (max-width: 575px)
+{
+	p
+	{
+		font-size: 13px;
+	}
+	h2
+	{
+		font-size: 36px;
+	}
+	.button
+	{
+		width: 160px;
+		height: 44px;
+	}
+	.button span
+	{
+		font-size: 12px;
+		line-height: 44px;
+	}
+	.button span::after
+	{
+		bottom: 0px;
+	}
+	.home
+	{
+		height: 250px;
+	}
+	.home_content
+	{
+		bottom: 58px;
+	}
+	.search_bar_container
+	{
+		margin-top: 60px;
+	}
+	.search_form_select
+	{
+		height: 45px;
+		font-size: 12px;
+	}
+	.search_bar_button
+	{
+		width: 196px;
+		height: 45px;
+		font-size: 14px;
+	}
+	.header_inner
+	{
+		height: 80px;
+	}
+	.header.scrolled .header_inner
+	{
+		height: 80px;
+	}
+	.logo_container
+	{
+		width: 165px;
+	}
+	.logo_subtitle
+	{
+		font-size: 8px;
+	}
+	.logo_title
+	{
+		font-size: 20px;
+		margin-top: 5px;
+	}
+	.logo_stars
+	{
+		margin-top: 8px;
+	}
+	.menu_nav_list li a
+	{
+		font-size: 36px;
+	}
+	.intro_images
+	{
+		height: calc(100vw - 70px);
+	}
+	.intro_img
+	{
+		width: 60%;
+	}
+	.intro_link a
+	{
+		font-size: 14px;
+	}
+}
+
+/************
+11. 539px
+************/
+
+@media only screen and (max-width: 539px)
+{
+	
+}
+
+/************
+12. 480px
+************/
+
+@media only screen and (max-width: 480px)
+{
+	
+}
+
+/************
+13. 479px
+************/
+
+@media only screen and (max-width: 479px)
+{
+	
+}
+
+/************
+14. 400px
+************/
+
+@media only screen and (max-width: 400px)
+{
+	
+}
+</style>
+
+
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div class="header_content">
+
+			<!-- Logo -->
+			<div class="logo_container d-flex flex-column align-items-center justify-content-center">
+				<div class="logo">
+					<a href="#" class="text-center">
+						<div class="logo_subtitle">hotel</div>
+						<div class="logo_title">Samira</div>
+						<div class="logo_stars">
+							<ul class="d-flex flex-row align-items-start justfy-content-start">
+								<li><i class="fa fa-star" aria-hidden="true"></i></li>
+								<li><i class="fa fa-star" aria-hidden="true"></i></li>
+								<li><i class="fa fa-star" aria-hidden="true"></i></li>
+								<li><i class="fa fa-star" aria-hidden="true"></i></li>
+								<li><i class="fa fa-star" aria-hidden="true"></i></li>
+							</ul>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_inner d-flex flex-row align-items-center justify-content-start">
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-center justify-content-start">
+									<li><a href="/"><div class="nav_item d-flex flex-column align-items-center justify-content-center"><span>home</span></div></a></li>
+									<li><a href="/sobre"><div class="nav_item d-flex flex-column align-items-center justify-content-center"><span>about us</span></div></a></li>
+									<li class="active"><a href="/quartos"><div class="nav_item d-flex flex-column align-items-center justify-content-center"><span>rooms</span></div></a></li>
+									<!-- <li><a href="news.html"><div class="nav_item d-flex flex-column align-items-center justify-content-center"><span>news</span></div></a></li> -->
+									<li><a href="/contato"><div class="nav_item d-flex flex-column align-items-center justify-content-center"><span>contact</span></div></a></li>
+								</ul>
+							</nav>
+							<a href="#" class="button_container header_button ml-auto"><div class="button text-center"><span>Book Your Stay</span></div></a>
+							<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+							<div class="header_review"><a href="#">Add your review</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="background_image" style="background-image:url(assets/images/menu.jpg)"></div>
+		<div class="menu_content d-flex flex-column align-items-center justify-content-center">
+			<ul class="menu_nav_list text-center">
+				<li><a href="/">Home</a></li>
+				<li><a href="/sobre">About us</a></li>
+				<li><a href="/quartos">Rooms</a></li>
+				<!-- <li><a href="news.html">News</a></li> -->
+				<li><a href="/contato">Contact</a></li>
+			</ul>
+			<div class="menu_review"><a href="#">Add your review</a></div>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<!-- Image credit: https://unsplash.com/@christoph -->
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="assets/images/rooms.jpg" data-speed="0.8"></div>
+		<div class="home_content">
+			<div class="home_subtitle">luxury resort</div>
+			<div class="home_title">Rooms</div>
+		</div>
+	</div>
+
+	<!-- Search Bar -->
+
+	<div class="search_bar">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="search_bar_container">
+						<form action="#" id="search_bar_form" class="search_bar_form d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-between clearfix">
+							<div>
+								<select class="search_form_select">
+									<option disabled selected>Select Arrival Date</option>
+									<option>07/15/2018</option>
+									<option>07/22/2018</option>
+									<option>07/29/2018</option>
+								</select>
+							</div>
+							<div>
+								<select class="search_form_select">
+									<option disabled selected>Select Departure Date</option>
+									<option>07/15/2018</option>
+									<option>07/22/2018</option>
+									<option>07/29/2018</option>
+								</select>
+							</div>
+							<div>
+								<select class="search_form_select">
+									<option disabled selected>Select Rooms</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+							</div>
+							<div><button class="search_bar_button">Request a Quote</button></div>
+						</form>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Rooms -->
+
+	<div class="rooms">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<div class="section_subtitle">luxury resort</div>
+						<div class="section_title"><h2>Choose a Room</h2></div>
+					</div>
+				</div>
+			</div>
+			<div class="row room_row">
+
+				<!-- Room -->
+				<div class="col-lg-4 room_col magic_up">
+					<div class="room">
+						<div class="room_image"><img src="assets/images/room_1.jpg" alt="https://unsplash.com/@jonathan_percy"></div>
+						<div class="room_content text-center">
+							<div class="room_price">From $90 / <span>Night</span></div>
+							<div class="room_type">double</div>
+							<div class="room_title"><a href="/quartos">Deluxe Suite</a></div>
+							<div class="room_text">
+								<p>Praesent fermentum ligula in dui imper diet, vel tempus nulla ultricies. Phasellus at commodo ligula.</p>
+							</div>
+							<a href="#" class="button_container room_button"><div class="button text-center"><span>Book Now</span></div></a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Room -->
+				<div class="col-lg-4 room_col magic_up">
+					<div class="room">
+						<div class="room_image"><img src="assets/images/room_2.jpg" alt="https://unsplash.com/@ultralinx"></div>
+						<div class="room_content text-center">
+							<div class="room_price">From $90 / <span>Night</span></div>
+							<div class="room_type">single</div>
+							<div class="room_title"><a href="/quartos">Luxury Suite</a></div>
+							<div class="room_text">
+								<p>Praesent fermentum ligula in dui imper diet, vel tempus nulla ultricies. Phasellus at commodo ligula.</p>
+							</div>
+							<a href="#" class="button_container room_button"><div class="button text-center"><span>Book Now</span></div></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Room -->
+				<div class="col-lg-4 room_col magic_up">
+					<div class="room">
+						<div class="room_image"><img src="assets/images/room_3.jpg" alt="https://unsplash.com/@rhemakallianpur"></div>
+						<div class="room_content text-center">
+							<div class="room_price">From $90 / <span>Night</span></div>
+							<div class="room_type">double</div>
+							<div class="room_title"><a href="/quartos">Deluxe Suite</a></div>
+							<div class="room_text">
+								<p>Praesent fermentum ligula in dui imper diet, vel tempus nulla ultricies. Phasellus at commodo ligula.</p>
+							</div>
+							<a href="#" class="button_container room_button"><div class="button text-center"><span>Book Now</span></div></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Room -->
+				<div class="col-lg-4 room_col magic_up">
+					<div class="room">
+						<div class="room_image"><img src="assets/images/room_4.jpg" alt="https://unsplash.com/@jonathan_percy"></div>
+						<div class="room_content text-center">
+							<div class="room_price">From $90 / <span>Night</span></div>
+							<div class="room_type">double</div>
+							<div class="room_title"><a href="/quartos">Deluxe Suite</a></div>
+							<div class="room_text">
+								<p>Praesent fermentum ligula in dui imper diet, vel tempus nulla ultricies. Phasellus at commodo ligula.</p>
+							</div>
+							<a href="#" class="button_container room_button"><div class="button text-center"><span>Book Now</span></div></a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Room -->
+				<div class="col-lg-4 room_col magic_up">
+					<div class="room">
+						<div class="room_image"><img src="assets/images/room_5.jpg" alt="https://unsplash.com/@ultralinx"></div>
+						<div class="room_content text-center">
+							<div class="room_price">From $90 / <span>Night</span></div>
+							<div class="room_type">single</div>
+							<div class="room_title"><a href="/quartos">Luxury Suite</a></div>
+							<div class="room_text">
+								<p>Praesent fermentum ligula in dui imper diet, vel tempus nulla ultricies. Phasellus at commodo ligula.</p>
+							</div>
+							<a href="#" class="button_container room_button"><div class="button text-center"><span>Book Now</span></div></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Room -->
+				<div class="col-lg-4 room_col magic_up">
+					<div class="room">
+						<div class="room_image"><img src="assets/images/room_6.jpg" alt="https://unsplash.com/@rhemakallianpur"></div>
+						<div class="room_content text-center">
+							<div class="room_price">From $90 / <span>Night</span></div>
+							<div class="room_type">double</div>
+							<div class="room_title"><a href="/quartos">Deluxe Suite</a></div>
+							<div class="room_text">
+								<p>Praesent fermentum ligula in dui imper diet, vel tempus nulla ultricies. Phasellus at commodo ligula.</p>
+							</div>
+							<a href="#" class="button_container room_button"><div class="button text-center"><span>Book Now</span></div></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Room -->
+				<div class="col-lg-4 room_col magic_up">
+					<div class="room">
+						<div class="room_image"><img src="assets/images/room_7.jpg" alt="https://unsplash.com/@jonathan_percy"></div>
+						<div class="room_content text-center">
+							<div class="room_price">From $90 / <span>Night</span></div>
+							<div class="room_type">double</div>
+							<div class="room_title"><a href="/quartos">Deluxe Suite</a></div>
+							<div class="room_text">
+								<p>Praesent fermentum ligula in dui imper diet, vel tempus nulla ultricies. Phasellus at commodo ligula.</p>
+							</div>
+							<a href="#" class="button_container room_button"><div class="button text-center"><span>Book Now</span></div></a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Room -->
+				<div class="col-lg-4 room_col magic_up">
+					<div class="room">
+						<div class="room_image"><img src="assets/images/room_8.jpg" alt="https://unsplash.com/@ultralinx"></div>
+						<div class="room_content text-center">
+							<div class="room_price">From $90 / <span>Night</span></div>
+							<div class="room_type">single</div>
+							<div class="room_title"><a href="/quartos">Luxury Suite</a></div>
+							<div class="room_text">
+								<p>Praesent fermentum ligula in dui imper diet, vel tempus nulla ultricies. Phasellus at commodo ligula.</p>
+							</div>
+							<a href="#" class="button_container room_button"><div class="button text-center"><span>Book Now</span></div></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Room -->
+				<div class="col-lg-4 room_col magic_up">
+					<div class="room">
+						<div class="room_image"><img src="assets/images/room_9.jpg" alt="https://unsplash.com/@rhemakallianpur"></div>
+						<div class="room_content text-center">
+							<div class="room_price">From $90 / <span>Night</span></div>
+							<div class="room_type">double</div>
+							<div class="room_title"><a href="/quartos">Deluxe Suite</a></div>
+							<div class="room_text">
+								<p>Praesent fermentum ligula in dui imper diet, vel tempus nulla ultricies. Phasellus at commodo ligula.</p>
+							</div>
+							<a href="#" class="button_container room_button"><div class="button text-center"><span>Book Now</span></div></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5">
+					<div class="newsletter_content">
+						<div class="section_title_container">
+							<div class="section_subtitle">luxury resort</div>
+							<div class="section_title"><h2>Our Newsletter</h2></div>
+						</div>
+						<div class="newsletter_text">
+							<p>Praesent fermentum ligula in dui imperdiet, vel tempus nulla ultricies. Phasellus at commodo ligula. Nullam molestie volutp at sapien.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div class="newsletter_form_container">
+						<form action="#" id="newsletter_form" class="newsletter_form">
+							<input type="email" class="newsletter_input" placeholder="Your e-mail" required="required">
+							<button class="newsletter_button"><span>Subscribe</span></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="newsletter_border_container"><div class="container"><div class="row border_row"><div class="col"><div class="newsetter_border"></div></div></div></div></div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+
+				<!-- Footer Logo -->
+				<div class="col-lg-3 footer_col">
+					<div class="footer_logo_container">
+						<div class="footer_logo">
+							<a href="#" class="text-center">
+								<div class="footer_logo_subtitle">hotel</div>
+								<div class="footer_logo_title">Samira</div>
+								<div class="footer_logo_stars">
+									<ul class="d-flex flex-row align-items-start justfy-content-start">
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+										<li><i class="fa fa-star" aria-hidden="true"></i></li>
+									</ul>
+								</div>
+							</a>
+						</div>
+						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</div>
+					</div>
+				</div>
+
+				<!-- Footer Menu -->
+				<div class="col-lg-5 footer_col">
+					<div class="footer_menu">
+						<ul class="d-flex flex-row align-items-start justify-content-start">
+							<li><a href="/">Home</a></li>
+							<li><a href="/sobre">About us</a></li>
+							<li><a href="/quartos">Rooms</a></li>
+							<!-- <li><a href="news.html">News</a></li> -->
+							<li><a href="/contato">Contact</a></li>
+						</ul>
+						<div class="footer_menu_text">
+							<p>Praesent fermentum ligula in dui imperdiet, vel tempus nulla ultricies. Phasellus at commodo ligula.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Footer Contact -->
+				<div class="col-lg-4 footer_col">
+					<div class="footer_contact clearfix">
+						<div class="footer_contact_content float-lg-right">
+							<ul>
+								<li>Address: <span>481 Creekside Lane Avila CA 93424</span></li>
+								<li>Phone: <span>+53 345 7953 32453</span></li>
+								<li>Email: <span>yourmail@gmail.com</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/styles/bootstrap-4.1.2/popper.js"></script>
+<script src="assets/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="assets/plugins/greensock/TweenMax.min.js"></script>
+<script src="assets/plugins/greensock/TimelineMax.min.js"></script>
+<script src="assets/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="assets/plugins/greensock/animation.gsap.min.js"></script>
+<script src="assets/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="assets/plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="assets/plugins/easing/easing.js"></script>
+<script src="assets/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="assets/js/rooms.js"></script>

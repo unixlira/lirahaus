@@ -16,6 +16,30 @@ $app->get('/', function() {
 
 });
 
+$app->get('/sobre', function() {
+
+	$page = new Page();
+	$page->setTpl("sobre");
+
+});
+
+
+$app->get('/quartos', function() {
+
+	$page = new Page();
+	$page->setTpl("quartos");
+
+});
+
+
+
+$app->get('/contato', function() {
+
+	$page = new Page();
+	$page->setTpl("contato");
+
+});
+
 $app->run();
 
  ?>
